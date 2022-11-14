@@ -410,7 +410,7 @@ def optimizeGreenTime(tl, groupFlowsMap, phaseLaneIndexMap, currentLength, optio
             groupFlowsMap[i % len(groupFlowsMap)][0] += 1
 
     if options.verbose:
-        totalLength = lostTime
+        totalLength = lostTime #TODO: start with the yellow and red time
         for i in groupFlowsMap:
             totalLength += groupFlowsMap[i][0]
             print("Green time for phase %s: %s" % (i, groupFlowsMap[i][0]))
